@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== ROOT VARIABLES ===== */
+
+:root {
+  --bg-dark: #0f0f14;
+  --accent: #ff4d6d;
+  --accent-soft: #ff8fa3;
+  --text-light: #f5f5f7;
+}
+
+/* ===== BODY BASE ===== */
+
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+
+.background-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 30%, rgba(255, 77, 109, 0.25), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(255, 143, 163, 0.2), transparent 40%);
+  animation: floatBackground 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatBackground {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+/* ===== CARD ===== */
+
+.valentine-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 60px;
+  max-width: 550px;
+  text-align: center;
+  box-shadow: 0 0 80px rgba(255, 77, 109, 0.15);
+}
+
+/* ===== TITLE ===== */
+
+.valentine-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+/* ===== SUBTEXT ===== */
+
+.valentine-subtext {
+  margin-top: 20px;
+  color: #cfcfd6;
+  font-size: 1.1rem;
+}
+
+/* ===== BUTTON ===== */
+
+.primary-btn {
+  margin-top: 40px;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 77, 109, 0.6);
+}
+
+.primary-btn {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 77, 109, 0.6);
+}
+
+/* ===== COMPACT PRIMARY BUTTON ===== */
+
+.primary-btn-compact {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4);
+}
+
+.primary-btn-compact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 77, 109, 0.6);
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #3a3a3f, #5a5a60);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ===== SUCCESS SCREEN ===== */
+
+.success-screen {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
